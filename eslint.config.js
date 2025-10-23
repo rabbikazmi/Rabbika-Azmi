@@ -24,3 +24,4 @@ export default tseslint.config(
     },
   },
 );
+// https://eslint.org/docs/latest/use/configure/configuration-files

@@ -1,8 +1,12 @@
+import React from 'react';
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ProjectCard } from "@/components/ProjectCard";
 import { ExperienceCard } from "@/components/ExperienceCard";
+import Navigation from "@/components/Navigation";
+import SideEmail from "@/components/SideEmail";
+import SideSocial from "@/components/SideSocial";
 
 const PortfolioPage = () => {
   const scrollToSection = (id: string) => {
@@ -12,88 +16,85 @@ const PortfolioPage = () => {
 
   const projects = [
     {
-      title: "AI-Powered Task Manager",
-      description: "A smart task management app that uses machine learning to prioritize tasks and predict completion times.",
-      techStack: ["React", "TypeScript", "Python", "TensorFlow", "Tailwind CSS"],
-      githubUrl: "https://github.com",
+      title: "AI-Powered Recipe Generator",
+      description: "A smart recipe generator that uses Computer Vision to generate personalized recipes based on available ingredients in the refrigerator by analyzing images taken with a smartphone camera.",
+      techStack: ["HTML", "FastAPI", "YOLO", "Javascript"],
+      githubUrl: "https://github.com/rabbikazmi/snapncook",
       caseStudy: {
-        problem: "Traditional task managers lack intelligent prioritization, forcing users to manually organize their workload without insights into realistic completion timelines.",
-        approach: "Developed a machine learning model trained on historical task data to predict task duration and automatically prioritize based on deadlines, dependencies, and user patterns. Integrated a React frontend with a Python Flask backend for real-time ML predictions.",
-        outcome: "Users reported a 40% increase in productivity and 60% reduction in missed deadlines. The prediction model achieved 85% accuracy after the first week of usage."
+        problem: "Traditional recipe apps lack personalization, often suggesting recipes that don't match users' dietary preferences or available ingredients.",
+        approach: "Developed a computer vision model to analyze images of ingredients and suggest recipes based on what's available. Integrated a user-friendly web interface for seamless interaction.",
+        outcome: "Achieved a 96.1% mAP@0.5, 93.7% Recall and 98% Precision. Users reported higher satisfaction with recipe suggestions."
       }
     },
     {
-      title: "Blockchain Voting System",
-      description: "A secure, transparent voting platform built on Ethereum blockchain ensuring tamper-proof elections.",
-      techStack: ["Solidity", "Web3.js", "React", "Node.js", "IPFS"],
-      githubUrl: "https://github.com",
+      title: "AI-Powered Safety Gear Detection System",
+      description: "A safety gear detection platform that uses computer vision to identify O₂ cylinders, toolkits, and fire extinguishers from uploaded images or live video feeds in high-stakes environments like space stations.",
+      techStack: ["Python", "OpenCV", "React.js","Tailwind CSS", "Flask"],
+      githubUrl: "https://github.com/rabbikazmi/eleven11",
       caseStudy: {
-        problem: "Traditional voting systems face security vulnerabilities, lack transparency, and are susceptible to tampering or manipulation.",
-        approach: "Built a decentralized voting application using Ethereum smart contracts for immutable vote recording. Implemented IPFS for distributed storage of voter data and used cryptographic techniques to ensure anonymity while maintaining verifiability.",
-        outcome: "Successfully conducted a pilot election with 500+ participants. Zero security incidents reported, and all votes were verifiable on-chain while maintaining voter privacy."
+        problem: "Traditional safety protocols rely on manual checks, which are prone to human error and can be time-consuming.",
+        approach: "Developed a computer vision system to automatically detect and classify safety gear in real-time. Integrated a multilingual user interface, text-to-speech alerts, and existing surveillance systems for live monitoring.",
+        outcome: "Achieved a 97.66% detection accuracy in controlled environments. Reduced inspection times by 50% and improved compliance with safety regulations."
       }
     },
     {
-      title: "Real-Time Collaboration Tool",
-      description: "A collaborative workspace with live editing, video calls, and integrated project management features.",
-      techStack: ["Next.js", "WebRTC", "Socket.io", "PostgreSQL", "Redis"],
-      githubUrl: "https://github.com",
+      title: "Crafting & Inventory System",
+      description: "A web-based crafting inventory system inspired by the Minecraft interface. Replicates a crafting experience where users manage an inventory, discover recipes, and combine items to craft new tools - all in a pixelated, responsive UI.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/rabbikazmi/minecraft-gui",
       caseStudy: {
-        problem: "Remote teams struggle with fragmented tools for communication, document collaboration, and project tracking, leading to reduced productivity and context switching.",
-        approach: "Created an all-in-one platform using WebRTC for peer-to-peer video calls, Socket.io for real-time document editing with operational transformation, and integrated Kanban boards for project management. Optimized performance with Redis caching.",
-        outcome: "Reduced tool switching by 70% for beta users. Achieved sub-100ms latency for real-time editing and supported up to 50 concurrent users per workspace."
+        problem: "Traditional crafting systems are often rigid and lack the flexibility to accommodate user-generated content.",
+        approach: "Developed a modular crafting system that allows users to define their own recipes and materials. Integrated a user-friendly interface for easy management.",
+        outcome: "Increased user engagement and satisfaction by allowing for personalized crafting experiences."
       }
     },
     {
-      title: "Mobile Fitness Tracker",
-      description: "Cross-platform fitness app with workout tracking, nutrition logging, and AI-powered recommendations.",
-      techStack: ["React Native", "Express", "MongoDB", "TensorFlow.js"],
-      githubUrl: "https://github.com",
+      title: "WebOS Inspired Portfolio",
+      description: "A dynamic portfolio showcasing projects, skills, and moments in a webOS-like interface with draggable windows and interactive elements.",
+      techStack: ["HTML", "CSS", "JavaScript"],
+      githubUrl: "https://github.com/rabbikazmi/floatfolio",
       caseStudy: {
-        problem: "Most fitness apps focus solely on tracking without providing personalized guidance, making it difficult for users to optimize their fitness journey.",
-        approach: "Developed a cross-platform mobile app using React Native with ML-powered workout recommendations based on user progress, body metrics, and goals. Integrated nutrition API for meal tracking and built a recommendation engine using TensorFlow.js.",
-        outcome: "Gained 1,000+ active users in beta phase. Users achieved their fitness goals 45% faster with personalized recommendations compared to generic workout plans."
+        problem: "Many portfolios lack interactivity and fail to engage visitors effectively.",
+        approach: "Created an all-in-one platform using HTML, CSS, and JavaScript to build a webOS-like interface with draggable windows and interactive elements.",
+        outcome: "Increased user engagement and time spent on portfolio by 50%. Received positive feedback for innovative design and usability."
       }
-    }
+    },
   ];
 
   const experiences = [
     {
-      role: "Software Engineering Intern",
-      company: "Tech Innovations Inc",
-      period: "June 2024 - Aug 2024",
+      role: "Generative AI & Computer Vision Intern",
+      company: "IT Department, IGDTUW",
+      period: "June 2024 - July 2024",
       description: [
-        "Developed and deployed 3 full-stack features using React, Node.js, and PostgreSQL, improving user engagement by 25%",
-        "Optimized database queries reducing API response time by 40%",
-        "Collaborated with cross-functional teams using Agile methodologies"
+        "Built a generative AI app with Google Gemini API for real-time recipe generation from images",
+        "Implemented LangChain & RAG workflows to explore modern AI architectures for intelligent systems.",
+        "Optimized a computer vision model to 96.1% mAP and 93.7% Recall via augmentation and hyperparameter tuning."
       ]
     },
     {
-      role: "Lead Developer",
-      company: "University Tech Club",
-      period: "Sept 2023 - Present",
+      role: "Research Intern",
+      company: "ACM Student Chapter, IGDTUW",
+      period: "Sept 2024 - April 2025",
       description: [
-        "Led a team of 8 developers building web applications for campus organizations",
-        "Organized weekly workshops on modern web technologies and best practices",
-        "Mentored junior developers through code reviews and pair programming sessions"
+        "Co-authored and presented “Adversarial Attacks on Autonomous Vehicles: A Comprehensive Review”, synthesizing 23+ studies at an International Conference.",
+        "Analyzed attack techniques, highlighting vulnerabilities in Autonomous Vehicles AI perception and control pipelines.",
+        "Reviewed defense mechanisms, providing insights for robust and secure autonomous systems."
       ]
-    },
-    {
-      role: "Freelance Web Developer",
-      company: "Self-Employed",
-      period: "Jan 2023 - Present",
-      description: [
-        "Built responsive websites and web applications for 10+ clients",
-        "Specialized in React, Next.js, and modern CSS frameworks",
-        "Maintained 100% client satisfaction with timely delivery and ongoing support"
-      ]
-    }
+    }, 
   ];
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <Navigation />
+      
+      {/* Side Components */}
+      <SideSocial />
+      <SideEmail />
+
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24">
+      <section className="min-h-screen flex items-center justify-center px-6 md:px-12 lg:px-24 pt-20">
         <div className="max-w-4xl w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -102,14 +103,14 @@ const PortfolioPage = () => {
           >
             <p className="mono text-primary text-sm md:text-base mb-5">Hi, my name is</p>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-4">
-              Alex Johnson
+              Rabbika Azmi.
             </h1>
             <h2 className="text-3xl md:text-5xl font-bold text-muted-foreground mb-6">
-              Aspiring Software Developer | AI & Web Enthusiast
+              AI & Autonomous Systems Enthusiast.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-              I'm a passionate developer specializing in building exceptional digital experiences. 
-              Currently focused on creating accessible, human-centered products with modern web technologies.
+              I’m an enthusiastic developer specializing in intelligent and autonomous systems,
+              focused on building impactful, human-centered AI-driven solutions through modern technologies.
             </p>
             <Button
               size="lg"
@@ -138,32 +139,42 @@ const PortfolioPage = () => {
               <span className="ml-4 h-[1px] bg-muted flex-grow max-w-xs"></span>
             </h2>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Hello! I'm Alex, a computer science student with a passion for building things that live on the internet. 
-                My interest in web development started back in 2020 when I decided to build my first website — turns out 
-                hacking together HTML & CSS taught me a lot about software engineering!
-              </p>
-              <p>
-                Fast-forward to today, and I've had the privilege of working on various projects ranging from AI-powered 
-                applications to blockchain solutions. My main focus these days is building accessible, inclusive products 
-                and digital experiences that make a difference.
-              </p>
-              <p>
-                I'm particularly interested in the intersection of artificial intelligence and web development, constantly 
-                exploring how ML can enhance user experiences. When I'm not coding, you'll find me contributing to open-source 
-                projects or learning the latest in tech.
-              </p>
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+              {/* Text Content */}
+              <div className="lg:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
+                <p>
+                  Hello! I'm Rabbika Azmi, an IT student with a passion for building things that live on the internet. 
+                  I'm driven by a fascination with intelligent systems and how machines can see, think, and act autonomously.
+                </p>
+                <p>
+                  I’ve had the opportunity to work on a range of projects involving machine learning models, computer vision systems, and intelligent automation.
+My current focus is on building AI-driven solutions and autonomous systems that are reliable, human-centered, and impactful.
+                </p>
+                <p>
+                  Beyond coding, I spend my time studying research papers, experimenting with AI models, and contributing to projects that advance autonomous technology.
+                </p>
 
-              <div className="pt-6">
-                <p className="text-foreground font-semibold mb-4">Here are a few technologies I've been working with recently:</p>
-                <div className="grid grid-cols-2 gap-2 mono text-sm">
-                  {["JavaScript (ES6+)", "React & Next.js", "Python", "Node.js", "TypeScript", "TensorFlow"].map((skill) => (
-                    <div key={skill} className="flex items-center">
-                      <span className="text-primary mr-2">▹</span>
-                      {skill}
-                    </div>
-                  ))}
+                <div className="pt-6">
+                  <p className="text-foreground font-semibold mb-4">Here are a few technologies I've been working with recently:</p>
+                  <div className="grid grid-cols-2 gap-2 mono text-sm">
+                    {["JavaScript (ES6+)", "React & Next.js", "Python", "OpenCV", "SUMO", "Agentic & Generative AI"].map((skill) => (
+                      <div key={skill} className="flex items-center">
+                        <span className="text-primary mr-2">▹</span>
+                        {skill}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Picture Space */}
+              <div className="lg:col-span-1 flex justify-center lg:justify-end">
+                <div className="w-64 h-64 lg:w-72 lg:h-72 bg-card border-2 border-primary/20 rounded-lg overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300">
+                  <img 
+                    src="/mee.jpg" 
+                    alt="Rabbika Azmi" 
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
               </div>
             </div>
@@ -186,9 +197,18 @@ const PortfolioPage = () => {
               <span className="ml-4 h-[1px] bg-muted flex-grow max-w-xs"></span>
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
               {projects.map((project, index) => (
-                <ProjectCard key={project.title} {...project} index={index} />
+                <div key={project.title}>
+                  <ProjectCard
+                    title={project.title}
+                    description={project.description}
+                    techStack={project.techStack}
+                    githubUrl={project.githubUrl}
+                    caseStudy={project.caseStudy}
+                    index={index}
+                  />
+                </div>
               ))}
             </div>
           </motion.div>
@@ -212,7 +232,15 @@ const PortfolioPage = () => {
 
             <div className="space-y-0">
               {experiences.map((experience, index) => (
-                <ExperienceCard key={experience.role} {...experience} index={index} />
+                <div key={experience.role}>
+                  <ExperienceCard
+                    role={experience.role}
+                    company={experience.company}
+                    period={experience.period}
+                    description={experience.description}
+                    index={index}
+                  />
+                </div>
               ))}
             </div>
           </motion.div>
@@ -234,30 +262,30 @@ const PortfolioPage = () => {
               Get In Touch
             </h2>
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              I'm currently looking for new opportunities and my inbox is always open. 
+              I'm open for new opportunities and my inbox is always open. 
               Whether you have a question or just want to say hi, I'll try my best to get back to you!
             </p>
 
             <div className="flex justify-center gap-6 mb-12">
               <Button variant="outline" size="icon" asChild className="w-12 h-12">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <a href="https://github.com/rabbikazmi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <Github className="w-5 h-5" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild className="w-12 h-12">
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <a href="https://linkedin.com/in/rabbika-azmi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </Button>
               <Button variant="outline" size="icon" asChild className="w-12 h-12">
-                <a href="mailto:hello@example.com" aria-label="Email">
+                <a href="mailto:azmirabbika@gmail.com" aria-label="Email">
                   <Mail className="w-5 h-5" />
                 </a>
               </Button>
             </div>
 
             <Button size="lg" asChild>
-              <a href="mailto:hello@example.com">
+              <a href="mailto:azmirabbika@gmail.com">
                 Say Hello
               </a>
             </Button>
@@ -268,7 +296,7 @@ const PortfolioPage = () => {
       {/* Footer */}
       <footer className="py-8 px-6 text-center">
         <p className="mono text-sm text-muted-foreground">
-          Built with React & Tailwind CSS
+          Built with luv by Rabbika
         </p>
       </footer>
     </div>
