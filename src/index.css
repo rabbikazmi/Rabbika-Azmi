@@ -8,7 +8,7 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Portfolio Theme - Pure Black & Teal */
+    /* Portfolio Theme - Pure Black & Silver */
     --background: 0 0% 0%;
     --foreground: 0 0% 95%;
 
@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 167 100% 65%;
-    --primary-foreground: 0 0% 0%;
+    --primary: 0 0% 85%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 95%;
@@ -27,15 +27,15 @@ All colors MUST be HSL.
     --muted: 0 0% 15%;
     --muted-foreground: 0 0% 60%;
 
-    --accent: 167 100% 65%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 85%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
     --border: 0 0% 20%;
     --input: 0 0% 15%;
-    --ring: 167 100% 65%;
+    --ring: 0 0% 85%;
 
     --radius: 0.5rem;
 
@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --black: 0 0% 0%;
     --black-lighter: 0 0% 7%;
     --gray-dark: 0 0% 15%;
-    --teal: 167 100% 65%;
+    --silver: 0 0% 85%;
     --gray: 0 0% 60%;
     --gray-light: 0 0% 95%;
   }
