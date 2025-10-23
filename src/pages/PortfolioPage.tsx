@@ -171,7 +171,7 @@ My current focus is on building AI-driven solutions and autonomous systems that 
               <div className="lg:col-span-1 flex justify-center lg:justify-end">
                 <div className="w-64 h-64 lg:w-72 lg:h-72 bg-card border-2 border-primary/20 rounded-lg overflow-hidden group hover:border-primary/60 hover:shadow-[0_0_20px_rgba(139,92,246,0.3)] transition-all duration-300">
                   <img 
-                    src="/mee.jpg" 
+                    src="public/mee.jpg" 
                     alt="Rabbika Azmi" 
                     className="w-full h-full object-cover object-center"
                   />
