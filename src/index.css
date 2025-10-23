@@ -8,44 +8,44 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Portfolio Theme - Deep Navy & Teal */
-    --background: 210 63% 11%;
-    --foreground: 220 17% 93%;
+    /* Portfolio Theme - Pure Black & Teal */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 95%;
 
-    --card: 215 50% 15%;
-    --card-foreground: 220 17% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 215 50% 15%;
-    --popover-foreground: 220 17% 93%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 167 100% 70%;
-    --primary-foreground: 210 63% 11%;
+    --primary: 167 100% 65%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 215 25% 27%;
-    --secondary-foreground: 220 17% 93%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 215 25% 27%;
-    --muted-foreground: 218 11% 65%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 167 100% 70%;
-    --accent-foreground: 210 63% 11%;
+    --accent: 167 100% 65%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 215 25% 27%;
-    --input: 215 25% 27%;
-    --ring: 167 100% 70%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 167 100% 65%;
 
     --radius: 0.5rem;
 
     /* Custom Portfolio Variables */
-    --navy-dark: 210 63% 11%;
-    --navy-light: 215 50% 15%;
-    --navy-lighter: 215 25% 27%;
-    --teal: 167 100% 70%;
-    --slate: 218 11% 65%;
-    --slate-light: 220 17% 93%;
+    --black: 0 0% 0%;
+    --black-lighter: 0 0% 7%;
+    --gray-dark: 0 0% 15%;
+    --teal: 167 100% 65%;
+    --gray: 0 0% 60%;
+    --gray-light: 0 0% 95%;
   }
 }
 
