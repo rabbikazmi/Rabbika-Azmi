@@ -173,7 +173,7 @@ const PortfolioPage = () => {
 
       {/* Projects Section */}
       <section id="projects" className="py-24 px-6 md:px-12 lg:px-24 bg-card/30">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -221,7 +221,7 @@ const PortfolioPage = () => {
 
       {/* Contact Section */}
       <section id="contact" className="py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
