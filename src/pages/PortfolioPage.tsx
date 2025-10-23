@@ -157,7 +157,7 @@ My current focus is on building AI-driven solutions and autonomous systems that 
                 <div className="pt-6">
                   <p className="text-foreground font-semibold mb-4">Here are a few technologies I've been working with recently:</p>
                   <div className="grid grid-cols-2 gap-2 mono text-sm">
-                    {["JavaScript (ES6+)", "React & Next.js", "Python", "OpenCV", "SUMO", "Agentic & Generative AI"].map((skill) => (
+                    {["JavaScript (ES6+)", "React.js & Typescript", "Python", "OpenCV", "SUMO", "Agentic & Generative AI"].map((skill) => (
                       <div key={skill} className="flex items-center">
                         <span className="text-primary mr-2">▹</span>
                         {skill}
