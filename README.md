@@ -1,4 +1,4 @@
 hi! its rabbika with my portfolio ver 2 <3
 
 
-### rabbika <3
+- rabbika 
