@@ -143,7 +143,7 @@ const PortfolioPage = () => {
               {/* Text Content */}
               <div className="lg:col-span-2 space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hello! I'm Rabbika Azmi, an IT student with a passion for building things that live on the internet. 
+                  Hello! I'm Rabbika Azmi, a Computer Science student with a passion for building things that live on the internet. 
                   I'm driven by a fascination with intelligent systems and how machines can see, think, and act autonomously.
                 </p>
                 <p>
