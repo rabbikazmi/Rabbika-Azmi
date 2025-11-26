@@ -16,14 +16,14 @@ const PortfolioPage = () => {
 
   const projects = [
     {
-      title: "AI-Powered Recipe Generator",
-      description: "A smart recipe generator that uses Computer Vision to generate personalized recipes based on available ingredients in the refrigerator by analyzing images taken with a smartphone camera.",
-      techStack: ["HTML", "FastAPI", "YOLO", "Javascript"],
-      githubUrl: "https://github.com/rabbikazmi/snapncook",
+      title: "Custom Neural Network-Driven Self-Driving Vehicle",
+      description: "A browser-based self-driving car simulation powered by a custom neural network, using ray-cast sensors and real-time JS inference to autonomously navigate a virtual road.",
+      techStack: ["HTML5 Canvas","Javascript", "Genetic Algorithm"],
+      githubUrl: "https://github.com/rabbikazmi/self-driving-vehicle",
       caseStudy: {
-        problem: "Traditional recipe apps lack personalization, often suggesting recipes that don't match users' dietary preferences or available ingredients.",
-        approach: "Developed a computer vision model to analyze images of ingredients and suggest recipes based on what's available. Integrated a user-friendly web interface for seamless interaction.",
-        outcome: "Achieved a 96.1% mAP@0.5, 93.7% Recall and 98% Precision. Users reported higher satisfaction with recipe suggestions."
+        problem: "Traditional rule-based driving fails on new tracks, so the goal was to build a car that can learn and adapt using neural-network predictions.",
+        approach: "Created a custom neural network with sensor inputs and used genetic algorithms to iteratively evolve the best driving behavior in a browser-based simulation.",
+        outcome: "The model successfully drives autonomously, avoids obstacles, and improves over generations, demonstrating adaptive AI behavior in real time."
       }
     },
     {
@@ -38,14 +38,14 @@ const PortfolioPage = () => {
       }
     },
     {
-      title: "Crafting & Inventory System",
-      description: "A web-based crafting inventory system inspired by the Minecraft interface. Replicates a crafting experience where users manage an inventory, discover recipes, and combine items to craft new tools - all in a pixelated, responsive UI.",
-      techStack: ["HTML", "CSS", "JavaScript"],
-      githubUrl: "https://github.com/rabbikazmi/minecraft-gui",
+      title: "Tri-Modal Earth Observation Network (Tri-EON)",
+      description: "A multi-task SegFormer-based deep learning framework for satellite imagery, performing classification, semantic segmentation, and optional change detection, all using a shared MiT encoder.",
+      techStack: ["Python", "PyTorch", "SegFormer (MiT Encoder)", "OpenCV"],
+      githubUrl: "https://github.com/rabbikazmi/Tri-Modal-Earth-Observation-Network-Tri-EON-/tree/main",
       caseStudy: {
-        problem: "Traditional crafting systems are often rigid and lack the flexibility to accommodate user-generated content.",
-        approach: "Developed a modular crafting system that allows users to define their own recipes and materials. Integrated a user-friendly interface for easy management.",
-        outcome: "Increased user engagement and satisfaction by allowing for personalized crafting experiences."
+        problem: "Separate models for classification, segmentation, and change detection are resource-intensive and hard to generalize to new satellite datasets.",
+        approach: "Built a unified SegFormer model with shared MiT encoder and task-specific heads for classification, segmentation, and optional change detection.",
+        outcome: "Achieved 97.20% validation / 96.93% test accuracy on EuroSAT with faster inference and lower GPU usage."
       }
     },
     {
@@ -157,7 +157,7 @@ My current focus is on building AI-driven solutions and autonomous systems that 
                 <div className="pt-6">
                   <p className="text-foreground font-semibold mb-4">Here are a few technologies I've been working with recently:</p>
                   <div className="grid grid-cols-2 gap-2 mono text-sm">
-                    {["JavaScript (ES6+)", "React.js & Typescript", "Python", "OpenCV", "SUMO", "Agentic & Generative AI"].map((skill) => (
+                    {["JavaScript (ES6+)", "React.js & Typescript", "Python", "OpenCV", "MLOps", "Agentic & Generative AI"].map((skill) => (
                       <div key={skill} className="flex items-center">
                         <span className="text-primary mr-2">▹</span>
                         {skill}
