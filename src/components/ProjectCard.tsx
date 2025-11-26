@@ -38,14 +38,14 @@ export const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className="group relative bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-[300px] max-w-[550px] w-full"
+      className="group relative bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-[360px] max-w-[550px] w-full"
     >
       <div className="flex flex-col h-full">
         <h3 className="text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors line-clamp-2">
           {title}
         </h3>
         
-        <p className="text-muted-foreground mb-4 flex-grow line-clamp-4 text-sm leading-relaxed">
+        <p className="text-muted-foreground mb-4 flex-grow line-clamp-5 text-sm leading-relaxed">
           {description}
         </p>
 
